@@ -46,14 +46,14 @@
             }
         }
         &-desciption {
-            width: max-content;
+            min-width: 0;
+            width: 100%;
+            max-width: max-content;
             display: flex;
             flex-direction: column;
             align-items: center;
-            @include to-xl() {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            @include to-sm() {
+                margin: 0 auto;
             }
         }
         &-flower {
