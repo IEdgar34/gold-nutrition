@@ -1,0 +1,88 @@
+@use "../mixins/mixins" as *;
+.produce {
+    width: 100%;
+    height: auto;
+    padding-bottom: 90px;
+    @include to-md() {
+        padding-bottom: 40px;
+    }
+    &_mob-img {
+        display: none;
+        @include to-md() {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: -40px;
+            width: 184px;
+            height: 148px;
+            z-index: 10;
+            /*  @include fluid-width(110,174,100,158) */
+        }
+        @include to-xs() {
+            width: 154px;
+            height: 120px;
+            right: -15px;
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        height: 637px;
+        background-image: url("images/product.png");
+        background-position: left top;
+        background-size: 815px 631px;
+        background-repeat: no-repeat;
+        position: relative;
+        @include to-lg() {
+            background-position: right top;
+            background-size: 600px 400px;
+            /* height: fit-content; */
+            height: 399px;
+        }
+        @include to-md() {
+            height: max-content;
+            background-image: none;
+            /*  background-image: url("images/product-mob.png");
+            background-position: right -23px;
+            background-size: 154px 120px; */
+        }
+    }
+    &__text_wrapper {
+        width: 100%;
+        max-width: 960px;
+        position: absolute;
+        right: 10px;
+        top: 82px;
+        @include to-md() {
+            position: static;
+        }
+        @include to-xl() {
+            top: 0;
+            left: 0;
+        }
+    }
+    &__title_wrapper {
+        margin-bottom: 44px;
+    }
+    &__title {
+        color: rgb(1, 41, 105);
+        @include fluid-fs(40, 96);
+        font-weight: 700;
+        line-height: 121px;
+        line-height: normal;
+        text-align: left;
+    }
+    &__descr {
+        color: rgb(0, 0, 0);
+        @include fluid-fs(18, 35);
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+    &__description {
+        color: rgb(0, 0, 0);
+        @include fluid-fs(16, 26);
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+}

@@ -1,0 +1,220 @@
+@use "../mixins/mixins" as *;
+.values {
+    width: 100%;
+    height: auto;
+    padding-bottom: 114px;
+    @include to-md() {
+        padding-bottom: 40px;
+    }
+    &--title-wrap {
+        display: flex;
+        gap: 108px;
+        padding-bottom: 46px;
+        @include to-xl() {
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+    }
+    &-title {
+        color: rgb(1, 41, 105);
+        @include fluid-fs(46, 96);
+        font-weight: 700;
+        text-align: left;
+        flex: 1 1 auto;
+    }
+    &--descr-wrap {
+        padding-top: 15px;
+        flex: 1 3 auto;
+        @include to-xl() {
+            padding-top: 0;
+        }
+    }
+    &-desc-title {
+        color: rgb(0, 0, 0);
+        @include fluid-fs(22, 35);
+        font-weight: 600;
+        line-height: 44px;
+        line-height: normal;
+        text-align: left;
+    }
+    &-descr {
+        color: rgb(0, 0, 0);
+        @include fluid-fs(18, 26);
+        font-weight: 400;
+        line-height: 33px;
+        line-height: normal;
+        text-align: left;
+    }
+    &--card-wrapp-f {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 33px;
+        &_values--card {
+            /* @include fluid-width(340, 540, 160, 370); */
+            @include fluid-width-1440(320, 540, 160, 370);
+            border-radius: 20px;
+            box-shadow: 0px 8px 8.4px 0px rgba(0, 0, 0, 0.14);
+            background: rgb(255, 255, 255);
+            padding: 99px 20px 20px 51px;
+            @include padding-top-left(20, 99, 20, 51);
+            position: relative;
+            @include to-lg() {
+                border-radius: 10px;
+                box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.14);
+                background: rgb(255, 255, 255);
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
+        &_values--card_title {
+            margin-bottom: 9px;
+            max-width: 377px;
+            color: rgb(0, 0, 0);
+            @include fluid-fs(18, 35);
+            font-weight: 600;
+            line-height: 44px;
+            line-height: normal;
+            text-align: left;
+        }
+        &_values--card_descr {
+            max-width: 369px;
+            color: rgb(0, 0, 0);
+            @include fluid-fs(16, 26);
+            font-weight: 400;
+            /*  line-height: 33px; */
+            line-height: normal;
+            text-align: left;
+        }
+        @include to-lg() {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+    &--card-wrapp {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        &_values--card {
+            &:nth-child(1) {
+                /*   @include fluid-width(340, 400, 160, 370); */
+                @include fluid-width-1440(320, 400, 160, 370);
+                border-radius: 20px;
+                box-shadow: 0px 8px 8.4px 0px rgba(0, 0, 0, 0.14);
+                background: rgb(255, 255, 255);
+                padding: 99px 20px 20px 51px;
+                @include padding-top-left(20, 99, 20, 51);
+                @include to-lg() {
+                    @include fluid-width-1440(320, 540, 160, 370);
+                    border-radius: 10px;
+                    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.14);
+                    background: rgb(255, 255, 255);
+                }
+            }
+            &:nth-child(2) {
+                /* @include fluid-width(340, 960, 220, 370); */
+                @include fluid-width-1440(320, 960, 220, 370);
+                position: relative;
+                padding: 99px 20px 20px 51px;
+                @include padding-top-left(20, 99, 20, 51);
+                @include to-lg() {
+                    @include fluid-width-1440(320, 540, 220, 370);
+                    border-radius: 10px;
+                    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.14);
+                    background: rgb(255, 255, 255);
+                }
+                .values--card-wrapp_values--card_title {
+                    max-width: 584px;
+                    position: relative;
+                    z-index: 10;
+                    color: rgb(255, 255, 255);
+                    @include fluid-fs(18, 35);
+                    font-weight: 600;
+                    line-height: 44px;
+                    line-height: normal;
+                    text-align: left;
+                    @include to-xl() {
+                        max-width: 286px;
+                    }
+                }
+                .values--card-wrapp_values--card_descr {
+                    position: relative;
+                    z-index: 10;
+                    max-width: 509px;
+                    color: rgb(255, 255, 255);
+                    /* font-size: 26px; */
+                    font-weight: 400;
+                    line-height: 33px;
+                    line-height: normal;
+                    text-align: left;
+                    @include to-xl() {
+                        max-width: 233px;
+                    }
+                }
+                img {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 16 / 9;
+                }
+            }
+            &:nth-child(3) {
+                @include fluid-width-1440(150, 260, 160, 370);
+                position: relative;
+                @include to-lg() {
+                    border-radius: 10px;
+                    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.14);
+                    background: rgb(255, 255, 255);
+                    @include fluid-width-1440(320, 540, 160, 370);
+                }
+                img {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 16 / 9;
+                }
+            }
+        }
+
+        &_values--card_title {
+            margin-bottom: 9px;
+            max-width: 331px;
+            color: rgb(0, 0, 0);
+            @include fluid-fs(18, 35);
+            font-weight: 600;
+            line-height: 44px;
+            line-height: normal;
+            text-align: left;
+        }
+        &_values--card_descr {
+            max-width: 269px;
+            color: rgb(0, 0, 0);
+            @include fluid-fs(16, 26);
+            font-weight: 400;
+            line-height: 33px;
+            line-height: normal;
+            text-align: left;
+        }
+        @include to-lg() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

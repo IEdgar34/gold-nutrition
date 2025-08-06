@@ -1,0 +1,69 @@
+@use "../mixins/mixins" as *;
+.serve {
+    width: 100%;
+    height: auto;
+    padding-bottom: 85px;
+    @include to-md {
+        padding-bottom: 40px;
+    }
+    &__wrapper {
+        width: 100%;
+    }
+    &__title_wrapper {
+        width: 100%;
+        height: 368px;
+        border-radius: 20px;
+        background-image: url("images/serve.png");
+        background-position: top right;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        @include padding-top-left(20, 81, 16, 115);
+        @include to-xl() {
+            background-position: 27% 100%;
+            /* background-image: url("images/serve-mob.png"); */
+        }
+        @include to-lg() {
+            background-position: 45% 100%;
+            /* background-position: 27% 100%; */
+            /* background-size: 100% 100%;
+            background-image: url("images/serve-mob.png"); */
+        }
+        @include to-sm() {
+            background-position: top right;
+            background-size: cover;
+            background-image: url("images/serve-mob.png");
+            padding-top: 20px;
+            padding-left: 16px;
+            height: 290px;
+        }
+    }
+    &__title {
+        color: rgb(255, 255, 255);
+        @include fluid-fs(47, 96);
+        font-weight: 700;
+        line-height: normal;
+        text-align: left;
+    }
+    &__descr {
+        max-width: 700px;
+        @include fluid-width(164, 700, 200, 200);
+        color: rgb(255, 255, 255);
+        @include fluid-fs(18, 35);
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+    &__txt {
+        width: 100%;
+        max-width: 1420px;
+        margin: 0 auto;
+        margin-top: 36px;
+        color: rgb(0, 0, 0);
+        @include fluid-fs(16, 26);
+        font-weight: 400;
+        line-height: 33px;
+        line-height: normal;
+        text-align: left;
+    }
+}
