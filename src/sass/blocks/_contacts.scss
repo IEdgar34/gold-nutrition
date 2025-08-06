@@ -98,6 +98,9 @@
         @include to-lg() {
             padding: 20px;
         }
+        @include to-sm() {
+            border-radius: 10px;
+        }
         &_link {
             display: flex;
             gap: 63px;
@@ -145,7 +148,7 @@
     &__logo_blocks {
         display: flex;
         align-items: end;
-        padding-bottom: 20px;
+        padding-bottom: 60px;
         gap: 71px;
         img {
             &:nth-child(1) {

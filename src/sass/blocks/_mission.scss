@@ -34,6 +34,9 @@
             height: 230px;
             border-radius: 20px;
         }
+        @include to-sm() {
+            border-radius: 10px;
+        }
     }
     &-second_img {
         display: block;
@@ -46,6 +49,9 @@
             border-radius: 20px;
             max-width: 340px;
             height: 230px;
+        }
+        @include to-sm() {
+            border-radius: 10px;
         }
     }
     &_title {

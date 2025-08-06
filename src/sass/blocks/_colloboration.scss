@@ -20,7 +20,7 @@
         @include to-xl() {
             height: max-content;
             align-items: center;
-            aspect-ratio:unset;
+            aspect-ratio: unset;
             gap: 30px;
         }
     }
@@ -32,10 +32,12 @@
         img {
             display: block;
             width: 100%;
+            @include to-sm() {
+                border-radius: 10px;
+            }
         }
         @include to-xl() {
             position: static;
-           
         }
     }
     &-title-wrapper {
@@ -54,7 +56,7 @@
         font-weight: 700;
         line-height: normal;
         text-align: left;
-        word-break: break-all;
+        /* word-break: break-all; */
         @include to-xl() {
             color: #012969;
         }

@@ -29,6 +29,9 @@
         @include to-md() {
             padding: 17px;
         }
+         @include to-sm() {
+            border-radius: 22px;
+        }
         img {
             display: block;
             position: absolute;

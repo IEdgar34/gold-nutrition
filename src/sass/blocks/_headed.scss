@@ -13,7 +13,7 @@
         height: 637px;
         background-image: url("images/headed.png");
         background-position: left top;
-        background-size: 566px 631px;
+        background-size: 498px 631px;
         background-repeat: no-repeat;
         position: relative;
         @include to-md() {
@@ -37,8 +37,11 @@
         width: 100%;
         max-width: 1120px;
         position: absolute;
-        right: 10px;
+        right: 80px;
         top: 87px;
+        @include  to-xxl() {
+            right: 60px;
+        }
         @include to-xl() {
             position: static;
             top: 0;

@@ -178,7 +178,7 @@
                     border-radius: 10px;
                     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.14);
                     background: rgb(255, 255, 255);
-                    @include fluid-width-1440(320, 540, 160, 370);
+                    @include fluid-width-1440(320, 540, 150, 370);
                 }
                 img {
                     display: block;
