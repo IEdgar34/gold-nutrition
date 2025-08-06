@@ -46,6 +46,10 @@
             }
         }
         &-desciption {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             @include to-xl() {
                 display: flex;
                 flex-direction: column;
@@ -58,12 +62,11 @@
             position: absolute;
             display: block;
             @include fluid-width(240, 738, 300, 822);
-            @include  to-sm() {
+            @include to-sm() {
                 width: 100%;
                 object-fit: contain;
                 object-position: bottom right;
             }
-           
         }
 
         &-img {
@@ -79,7 +82,7 @@
         }
         &-title {
             /*  max-width: 721px; */
-            @include fluid-width(280, 721, 71, 143);
+            @include fluid-width-1440(280, 721, 71, 143);
             color: rgb(1, 41, 105);
             @include fluid-fs(15, 38);
             font-weight: 700;
