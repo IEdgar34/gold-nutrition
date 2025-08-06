@@ -15,7 +15,7 @@
             top: -40px;
             width: 158px;
             height: 148px;
-            z-index: 10;
+            z-index: -10;
             /*  @include fluid-width(110,174,100,158) */
         }
         @include to-xs() {

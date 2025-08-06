@@ -29,7 +29,7 @@
         @include to-md() {
             padding: 17px;
         }
-         @include to-sm() {
+        @include to-sm() {
             border-radius: 22px;
         }
         img {
@@ -37,9 +37,15 @@
             position: absolute;
             /* width: 412px;
             height: 283px; */
-            @include fluid-width(120, 412, 100, 283);
+            @include fluid-width(100, 412, 70, 283);
             right: -27%;
             top: -19%;
+            @media (min-width: 600px) and (max-width: 768px) {
+                transform: rotate(22deg);
+            }
+            @include to-1570() {
+                top: -84px;
+            }
             @include to-xl() {
                 right: -1%;
                 top: 69%;
